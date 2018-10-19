@@ -131,7 +131,7 @@ client.on('message', message => {
 
 
 
-     if(commandIs('ban', message)){
+     if (commandIs('ban', message)){
          if (message.member.hasPermissions(['BAN_MEMBERS'])){
            if(args.length === 1){
              message.channel.sendMessage(message.author.username + " Mention a person to ban! *Usage:* `$ban [@user]`");
