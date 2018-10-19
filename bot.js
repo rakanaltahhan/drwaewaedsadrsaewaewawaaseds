@@ -1051,29 +1051,4 @@ message.channel.send(`${user} has ${inviteCount} invites.`);
   }
 });
 
-const moment = require("moment");
-const dateFormat = require('dateformat');
-const Canvas = require("canvas");
-let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))
-client.on("message", message => {
-
-  if (message.author.bot) return;
-  if(!message.channel.guild)return;
-  if (!profile[message.author.id]) profile[message.author.id] = {
-    tite: 'Super User',
-    rep: 0,
-    reps: 'NOT YET',
-    lastDaily:'Not Collected',
-    level: 0,
-    points: 0,
-    credits: 150,
-  };
-
-
-fs.writeFile('profile.json', JSON.stringify(profile), (err) => {
-if (err) console.error(err);
-})
-});
-
-
 client.login(process.env.BOT_TOKEN);
