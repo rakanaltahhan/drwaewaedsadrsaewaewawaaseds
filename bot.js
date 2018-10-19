@@ -128,22 +128,6 @@ client.on('message', message => {
       }}).then(msg => {msg.delete(3000)});
                           }
 
-
-
-
-     if (commandIs('ban', message)){
-         if (message.member.hasPermissions(['BAN_MEMBERS'])){
-           if(args.length === 1){
-             message.channel.sendMessage(message.author.username + " Mention a person to ban! *Usage:* `$ban [@user]`");
-           } else {
-               message.guild.member(message.mentions.users.first()).ban().catch(console.error);
-             }
-         } else {
-             message.reply(':no_entry_sign: You need the permission ``BAN_MEMBERS`` to use this command.');
-           }
-
-     }
-
 });
 //
 client.on('message', message => {
