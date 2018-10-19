@@ -263,8 +263,6 @@ client.on("message", message => {
 
 });
 
-var prefix = "ts!";
-
 client.on('message', message => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
