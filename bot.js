@@ -322,9 +322,6 @@ client.on('message', message => {
 
 });
 
-var prefix = 'ts!';
-
-
 client.on('message', message => {
     if (message.content.startsWith("ts!avatar")) {
         var mentionned = message.mentions.users.first();
@@ -395,7 +392,6 @@ let embed = new Discord.RichEmbed()
 }
 });
 
- var prefix = "ts!";
 client.on('message', message => {
          if (message.content === prefix + "Date") {
          if (!message.channel.guild) return message.reply('** This command only for servers **');
@@ -692,7 +688,6 @@ if (message.content.startsWith(prefix + 'watch')) {
 
 
 client.on('message' , message => {
-var prefix = "ts!"
 
 if (message.author.bot) return;
 if (message.content.startsWith(prefix + "rep")) {
@@ -754,7 +749,6 @@ message.channel.send(embed);
 
 //
 client.on('message', message => {
-var prefix = "ts!"
   if (message.author.iiTz) return;
   if (!message.content.startsWith(prefix)) return;
   var command = message.content.split(" ")[0];
