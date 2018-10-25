@@ -1035,6 +1035,8 @@ message.channel.send(`${user} has ${inviteCount} invites.`);
   }
 });
 client.on('message', message => {
+var prefix = "ts!";
+
     if (message.author.id === client.user.id) return;
     if (message.guild) {
    let embed = new Discord.RichEmbed()
