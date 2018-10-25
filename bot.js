@@ -907,7 +907,7 @@ client.on('message' , async (message) => {
     }
 });
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","' ⌜ TS ⌟"));
+    member.addRole(member.guild.roles.find("name","- TS"));
     });
 var dat = JSON.parse(fs.readFileSync('./invite.json', 'utf8'));
 function forEachObject(obj, func) {
@@ -982,7 +982,7 @@ client.on('message', message => {
 
 
            if (message.content.startsWith(prefix + "id")) {
-           if (message.channel.id !== "500074463191236618") return;
+           if (message.channel.id !== "504662027327766548" , "504711957299855360") return;
             if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات ❌`);
 
                 message.guild.fetchInvites().then(invs => {
