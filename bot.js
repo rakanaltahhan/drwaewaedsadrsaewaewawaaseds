@@ -1077,5 +1077,6 @@ message.guild.members.forEach(m => {
 var NormalRep = args.replace('<server>' ,message.guild.name).replace('<user>', m).replace('<by>', `${message.author.username}#${message.author.discriminator}`)
 m.send(NormalRep);
 msg.delete();
+});
 
 client.login(process.env.BOT_TOKEN);
