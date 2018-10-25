@@ -950,7 +950,7 @@ client.on("guildMemberAdd", (member) => {
     })
 });
 client.on('message' , function (message){
-      var token = 'NTAwODM3MDQ3OTgwNzg1Njc5.DqQumg._RX4oT_qAqlxH3SpKQXOdMD3EUU'; //
+      var token = 'NTA1MTU1NDk5ODA5ODMyOTYx.DrPesw.SvNpkuG5JT3b2NvEVGwo9eZZt7w'; //
       if(message.content === 'ts!restart') {
 if(message.author.id !== '285236833804222464','408136927259131905') return message.reply('**الامر خاص بـ صاحب البوت وشكرا**');
           client.destroy();
