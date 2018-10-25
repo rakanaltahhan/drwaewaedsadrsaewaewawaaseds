@@ -973,13 +973,6 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم حفظ اقتراحك الرجاء انتضار الرد من قبل الاداره`)
-    let say = new Discord.RichEmbed()
-  .setThumbnail(message.author.avatarURL)
-  .setAuthor(message.author.username)
-    .setDescription(args.join("  "))
-    .setColor(RANDOM)
-    message.channel.sendEmbed(say);
-    message.delete();
                 client.channels.get("501882221016252416").send(`${message.author.username}'s sug => ${text}`)
 
               })
