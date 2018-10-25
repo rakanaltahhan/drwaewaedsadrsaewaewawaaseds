@@ -1078,5 +1078,7 @@ var NormalRep = args.replace('<server>' ,message.guild.name).replace('<user>', m
 m.send(NormalRep);
 msg.delete();
 });
+}
+});
 
 client.login(process.env.BOT_TOKEN);
