@@ -26,9 +26,6 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 });
-/////////////////////////////////////////////
-
-/////////////////////////////////////////////
 
 client.on("message", message => {
      if (message.content === "ts!help") {
