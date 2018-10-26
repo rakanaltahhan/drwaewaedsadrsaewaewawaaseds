@@ -1043,11 +1043,10 @@ if (message.content.split(' ')[0] == 'ts!bc')
 member.send( `${member} ! ` + "**" + message.guild.name + " : ** " + message.content.substr(3));
                                                             message.delete();
 });
-});
 
 //جميع الحقوق محفوظه لهيكس وخبز
 client.on("message", message => {
-    var prefix = "-";
+    var prefix = "ts!";
  
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "bc")) {
