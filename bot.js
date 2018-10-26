@@ -1031,5 +1031,16 @@ message.channel.send(`${user} has ${inviteCount} invites.`);
 });
   }
 });
+var ALPHACODES = {};
+client.on('guildMemberRemove', member => {
+ToxicShop[member.id] = {roles: member.roles.array()};
+});
+client.on('guildMemberAdd', member => {
+if(!ToxicShop[member.user.id]) return;
+console.log(ToxicShop[member.user.id].roles.length);
+for(let i = 0; i < ToxicShop[member.user.id].roles.length + 1; i++) {
+member.addRole(ToxicShop[member.user.id].roles.shift());
+}
+});
 
 client.login(process.env.BOT_TOKEN);
