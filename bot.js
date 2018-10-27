@@ -946,19 +946,6 @@ client.on("guildMemberAdd", (member) => {
         })
     })
 });
-client.on('message' , function (message){
-      var token = 'NTA1MTU1NDk5ODA5ODMyOTYx.DrPesw.SvNpkuG5JT3b2NvEVGwo9eZZt7w'; //
-      if(message.content === 'ts!restart') {
-if(message.author.id !== '285236833804222464','408136927259131905') return message.reply('**الامر خاص بـ صاحب البوت وشكرا**');
-          client.destroy();
-          client.login(token) // لا تغيرها
-var time = 7200000;
-client.setInterval(function() {
-    client.destroy();
-    client.login(token) // لا تغيرها
-  }, time);
-}
-})
 
 client.on('message', async message => {
   if(message.content.startsWith(prefix + "sugg")) {
