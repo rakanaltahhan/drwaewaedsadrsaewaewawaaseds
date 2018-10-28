@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'ts!'
+const prefix = '-'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -28,15 +28,15 @@ client.on('ready', () => {
 });
 
 client.on("message", message => {
-     if (message.content === "ts!help") {
+     if (message.content === "-help") {
          message.react('👌')
          if(!message.channel.guild) return message.reply('** This command only for servers **');
-        message.reply("** تم الاريسال فـ الخاص :heavy_check_mark: **")
+        message.reply("** تم الإرسال فـ الخاص :heavy_check_mark: **")
      }
 });
 
 client.on("message", message => {
- if (message.content === "ts!help") {
+ if (message.content === "-help") {
   const embed = new Discord.RichEmbed()
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
@@ -44,34 +44,34 @@ client.on("message", message => {
 
  **
 ╔[❖════════════❖]╗
-                  Prefix = ' ts! '
+                  Prefix = ' - '
 ╚[❖════════════❖]╝
 
 ╔[❖════════════❖]╗
                     اوامر عامة
 ╚[❖════════════❖]╝
 
-❖ ts!members ➾ معلومات الاعضاء
+❖ -members ➾ معلومات الاعضاء
 
-❖ ts!avatar ➾ شعار حسابك
+❖ -avatar ➾ شعار حسابك
 
-❖ ts!image  ➾ شعار السيرفر
+❖ -image  ➾ شعار السيرفر
 
-❖ ts!stats ➾ معلومات عن البوت سرعة البوت والخادم ايضا
+❖ -stats ➾ معلومات عن البوت سرعة البوت والخادم ايضا
 
-❖ ts!id ➾ اي دي
+❖ -id ➾ اي دي
 
-❖ ts!Date ➾ التاريخ
+❖ -Date ➾ التاريخ
 
-❖ ts!ping ➾ عرض سرعه اتصال البوت
+❖ -ping ➾ عرض سرعه اتصال البوت
 
-❖ ts!bot ➾ معلومات البوت
+❖ -bot ➾ معلومات البوت
 
-❖ ts!server ➾ معلومات السيرفر
+❖ -server ➾ معلومات السيرفر
 
-❖ ts!hphoto ➾ اذا ترد صورة من فريق الدعم لى سيرفر/أليك/الصديقكا
+❖ -hphoto ➾ اذا ترد صورة من فريق الدعم لى سيرفر/أليك/الصديقكا
 
-❖ ts!hintro ➾ اذا تريد انترو لي قناتك اليوتيوب
+❖ -hintro ➾ اذا تريد انترو لي قناتك اليوتيوب
 
 
 ╔[❖══════════════════════════════════❖]╗
@@ -92,7 +92,7 @@ message.author.sendEmbed(embed)
 
 //
 client.on('message', message => {
-     if (message.content === "ts!ping") {
+     if (message.content === "-ping") {
       const embed = new Discord.RichEmbed()
 
   .setColor("RANDOM")
@@ -107,7 +107,7 @@ client.on('message', message => {
 
 
   client.on("message", message => {
-    var prefix = "tststststst!";
+    var prefix = "-";
 
             var args = message.content.substring(prefix.length).split(" ");
             if (message.content.startsWith(prefix + "clear")) {
@@ -128,7 +128,7 @@ client.on('message', message => {
 });
 //
 client.on('message', message => {
-    if (message.content.startsWith("ts!stats")) {
+    if (message.content.startsWith("-stats")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setColor('RANDOM')
@@ -161,7 +161,7 @@ function timeCon(time) {
 
 //
 client.on('message', message => {
-    if (message.content.startsWith("ts!avatar")) {
+    if (message.content.startsWith("-avatar")) {
         var mentionned = message.mentions.users.first();
     var iiTzK;
       if(mentionned){
@@ -182,7 +182,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "ts!mute") {
+  if (command === "-mute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -216,7 +216,7 @@ client.on("message", message => {
 
   let command = message.content.split(" ")[0];
 
-  if (command === "ts!unmute") {
+  if (command === "-unmute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -275,7 +275,7 @@ if (command == "embed") {
 });
 
 client.on('message', message => {
-    if (message.content == 'ts!server') {
+    if (message.content == '-server') {
         var servername = message.guild.name
         var اونر = message.guild.owner
         var اعضاء = message.guild.memberCount
@@ -304,7 +304,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("ts!avatar")) {
+    if (message.content.startsWith("-avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -321,7 +321,7 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-if (message.content.startsWith(prefix + "ts!servers")) {
+if (message.content.startsWith(prefix + "-servers")) {
          if(!message.author.id === '285236833804222464') return;
 var gimg;
 var gname;
@@ -352,7 +352,7 @@ Server MemberCount : **${gmemb} **
 
 client.on('message', message => {  // ui
 if (!message.channel.guild) return;
-var prefix = "ts!";
+var prefix = "-";
   if (message.content ===  prefix + 'ui') {
 let user = message.mentions.users.first();
  if (!user) { user = message.author }
@@ -436,7 +436,7 @@ client.on('message', message => {
 });
 
 client.on("message", message => {
-    const prefix = "ts!"
+    const prefix = "-"
 
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -455,31 +455,34 @@ client.on("message", message => {
   });
 
 client.on('message', message => {
-   if (message.content === "ts!roll 1") {
+   if (message.content === "-roll 1") {
   message.channel.sendMessage(Math.floor(Math.random() * 25));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "ts!roll 2") {
+   if (message.content === "-roll 2") {
   message.channel.sendMessage(Math.floor(Math.random() * 50));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "ts!roll 3") {
+   if (message.content === "-roll 3") {
   message.channel.sendMessage(Math.floor(Math.random() * 75));
     }
 });
 
 client.on('message', message => {
-   if (message.content === "ts!roll 4") {
+   if (message.content === "-roll 4") {
   message.channel.sendMessage(Math.floor(Math.random() * 100));
     }
 });
 
+
+//  الإرسال stream
+
 client.on('message', message => {
-     if (message.content === "ts!bot") {
+     if (message.content === "-bot") {
             if(!message.channel.guild) return message.reply('** This command only for servers **');
      let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -492,7 +495,7 @@ message.channel.sendEmbed(embed);
 });
 
 client.on('message', message => {
-    if(message.content == 'ts!members') {
+    if(message.content == '-members') {
        message.react(":white_check_mark:")
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info🔋
@@ -510,7 +513,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (true) {
-if (message.content === 'ts!supp') {
+if (message.content === '-supp') {
       message.author.send(' |https://discord.gg/X8eVQTk| لـ أي استفسار').catch(e => console.log(e.stack));
 
     }
@@ -520,7 +523,7 @@ if (message.content === 'ts!supp') {
 
 
 client.on('message', message => {
-     if (message.content === "ts!supp") {
+     if (message.content === "-supp") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
@@ -598,7 +601,7 @@ Server MemberCount : **${gmemb} **
 });
 
 client.on('message', message => {
-var prefix = "ts!";
+var prefix = "-";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
@@ -633,7 +636,7 @@ if (message.content.startsWith(prefix + 'watch')) {
  });
 //
 client.on('message', message => {
-var prefix = "ts!";
+var prefix = "-";
 
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
@@ -904,7 +907,7 @@ client.on('message' , async (message) => {
     }
 });
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","- TS"));
+    member.addRole(member.guild.roles.find("name",".Rabbit"));
     });
 var dat = JSON.parse(fs.readFileSync('./invite.json', 'utf8'));
 function forEachObject(obj, func) {
